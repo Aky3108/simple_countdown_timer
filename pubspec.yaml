@@ -1,6 +1,6 @@
 name: simple_count_down_timer
 description: A Simple Count Down Timer Widget
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Aky3108/simple_countdown_timer.git
 
 environment:
