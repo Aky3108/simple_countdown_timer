@@ -33,8 +33,11 @@ class _FadeInTimerState extends State<FadeInTimer> {
           builder: (String data) {
             return Text(
               "$data :",
-              style:
-                  widget.textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: widget.textStyle ??
+                  const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
             );
           },
         ),
@@ -43,8 +46,11 @@ class _FadeInTimerState extends State<FadeInTimer> {
           builder: (String data) {
             return Text(
               "$data : ",
-              style:
-                  widget.textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: widget.textStyle ??
+                  const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
             );
           },
         ),
@@ -53,8 +59,11 @@ class _FadeInTimerState extends State<FadeInTimer> {
           builder: (String data) {
             return Text(
               "$data : ",
-              style:
-                  widget.textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: widget.textStyle ??
+                  const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
             );
           },
         ),
@@ -63,8 +72,11 @@ class _FadeInTimerState extends State<FadeInTimer> {
           builder: (String data) {
             return Text(
               data,
-              style:
-                  widget.textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: widget.textStyle ??
+                  const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
             );
           },
         )

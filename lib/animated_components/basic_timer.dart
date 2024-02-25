@@ -22,19 +22,35 @@ class BasicTimer extends StatelessWidget {
       children: [
         Text(
           "$daysString :",
-          style: textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          style: textStyle ??
+              const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
         ),
         Text(
           "$hoursString : ",
-          style: textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          style: textStyle ??
+              const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
         ),
         Text(
           "$minutesString : ",
-          style: textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          style: textStyle ??
+              const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
         ),
         Text(
           secondsString,
-          style: textStyle ?? const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          style: textStyle ??
+              const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
         ),
       ],
     );

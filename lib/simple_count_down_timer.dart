@@ -15,7 +15,10 @@ class SimpleCountDownTimer extends StatefulWidget {
   final AnimationStyle? animationStyle;
 
   SimpleCountDownTimer(
-      {super.key, required this.duration, this.textStyle, this.animationStyle = AnimationStyle.fadeIn});
+      {super.key,
+      required this.duration,
+      this.textStyle,
+      this.animationStyle = AnimationStyle.fadeIn});
 
   @override
   State<SimpleCountDownTimer> createState() => _SimpleCountDownTimerState();
@@ -53,9 +56,12 @@ class _SimpleCountDownTimerState extends State<SimpleCountDownTimer> {
   void updateTimerStrings() {
     setState(() {
       daysString = widget.duration.inDays.toString().padLeft(2, '0');
-      hoursString = widget.duration.inHours.remainder(24).toString().padLeft(2, '0');
-      minutesString = widget.duration.inMinutes.remainder(60).toString().padLeft(2, '0');
-      secondsString = widget.duration.inSeconds.remainder(60).toString().padLeft(2, '0');
+      hoursString =
+          widget.duration.inHours.remainder(24).toString().padLeft(2, '0');
+      minutesString =
+          widget.duration.inMinutes.remainder(60).toString().padLeft(2, '0');
+      secondsString =
+          widget.duration.inSeconds.remainder(60).toString().padLeft(2, '0');
     });
   }
 
