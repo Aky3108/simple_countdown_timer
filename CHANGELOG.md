@@ -6,3 +6,6 @@ readme file updated
 
 ## 1.0.2
 minor fixes
+
+## 1.0.2
+description fixes in pubspec

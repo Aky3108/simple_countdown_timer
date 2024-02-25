@@ -1,6 +1,6 @@
 name: simple_count_down_timer
-description: This is a simple countdown timer widget built with Flutter. It displays the remaining time until a specified end date and time, and triggers a callback function when the countdown finishes.
-version: 1.0.2
+description: This is a simple countdown timer widget. It displays the remaining time until a specified time, triggers a callback function when the countdown finishes.
+version: 1.0.3
 homepage: https://github.com/Aky3108/simple_countdown_timer.git
 
 environment:
