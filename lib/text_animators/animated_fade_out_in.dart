@@ -29,10 +29,10 @@ class AnimatedFadeOutIn<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AnimatedFadeOutInState<T> createState() => _AnimatedFadeOutInState<T>();
+  AnimatedFadeOutInState<T> createState() => AnimatedFadeOutInState<T>();
 }
 
-class _AnimatedFadeOutInState<T> extends State<AnimatedFadeOutIn<T>> with SingleTickerProviderStateMixin {
+class AnimatedFadeOutInState<T> extends State<AnimatedFadeOutIn<T>> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
   late T dataToShow;

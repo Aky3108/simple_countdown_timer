@@ -5,13 +5,14 @@ import 'package:simple_count_down_timer/animated_components/basic_timer.dart';
 
 import 'animated_components/fade_in_timer.dart';
 
+//ignore: must_be_immutable
 class SimpleCountDownTimer extends StatefulWidget {
   ///sets the duration for the count down timer
   Duration duration;
 
-  TextStyle? textStyle;
+  final TextStyle? textStyle;
 
-  AnimationStyle? animationStyle;
+  final AnimationStyle? animationStyle;
 
   SimpleCountDownTimer(
       {super.key, required this.duration, this.textStyle, this.animationStyle = AnimationStyle.fadeIn});
