@@ -7,5 +7,8 @@ readme file updated
 ## 1.0.2
 minor fixes
 
-## 1.0.2
+## 1.0.3
 description fixes in pubspec
+
+## 1.0.4
+removed unused libraries

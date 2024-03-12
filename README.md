@@ -11,7 +11,7 @@ This is a simple countdown timer widget built with Flutter. It displays the rema
 ## Installation
 1. Add the dependency to your pubspec.yaml file:
 ```dependencies:
-  simple_count_down_timer: ^1.0.0 # Replace with the latest version
+  simple_count_down_timer: ^1.0.4 # Replace with the latest version
 ```
 2. Run flutter pub get to install the package.
 
@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
 
 # Additional Notes
 This package is for simple countdown timers. For more advanced features like pausing, resuming, and complex formatting, consider exploring other timer packages available on pub.dev.
-Make sure to replace ^1.0.0 with the latest version of the countdown_timer package in your pubspec.yaml file.
+Make sure to replace ^1.0.4 with the latest version of the countdown_timer package in your pubspec.yaml file.
 
 
 
