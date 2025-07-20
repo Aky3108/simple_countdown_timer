@@ -55,6 +55,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.aky.simple.timer.simple_count_down_timer_example'
 }
 
 flutter {
