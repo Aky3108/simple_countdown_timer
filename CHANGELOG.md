@@ -12,3 +12,6 @@ description fixes in pubspec
 
 ## 1.0.4
 removed unused libraries
+
+## 1.0.5
+updated gradle to 8.11.1
