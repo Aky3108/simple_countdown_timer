@@ -3,8 +3,8 @@ description: Demonstrates how to use the simple_count_down_timer plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=3.1.3 <4.0.0'
-
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0'
 
 dependencies:
   flutter:
@@ -13,12 +13,12 @@ dependencies:
   simple_count_down_timer:
     path: ../
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
 

@@ -15,3 +15,7 @@ removed unused libraries
 
 ## 1.0.5
 updated gradle to 8.11.1
+
+## 1.0.6
+- Updated Flutter and Dart SDK constraints to latest versions.
+- Updated dependencies to latest versions.
