@@ -19,14 +19,14 @@ class AnimatedFadeOutIn<T> extends StatefulWidget {
   final DataDidChangeCallback<T>? dataDidChange;
 
   const AnimatedFadeOutIn({
-    Key? key,
+    super.key,
     this.initialData,
     required this.data,
     required this.builder,
     this.duration = const Duration(milliseconds: 300),
     this.onFadeComplete,
     this.dataDidChange,
-  }) : super(key: key);
+  });
 
   @override
   AnimatedFadeOutInState<T> createState() => AnimatedFadeOutInState<T>();
