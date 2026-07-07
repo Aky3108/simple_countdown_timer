@@ -6,20 +6,18 @@ import PackageDescription
 let package = Package(
     name: "simple_count_down_timer",
     platforms: [
-        .iOS(.v12)
+        .iOS("12.0")
     ],
     products: [
         .library(
-            name: "simple_count_down_timer",
+            name: "simple-count-down-timer",
             targets: ["simple_count_down_timer"]
         ),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "simple_count_down_timer",
-            dependencies: [],
-            path: "Classes"
+            name: "simple_count_down_timer"
         ),
     ]
 )
