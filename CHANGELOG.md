@@ -27,3 +27,8 @@ updated gradle to 8.11.1
 - Added Swift Package Manager support (`ios/Package.swift`).
 - Migrated `flutter_lints` to ^6.0.0 and updated example dependencies.
 - Modernized widget code to use `super.key`.
+
+## 1.0.8
+- Fixed Swift Package Manager support on iOS by moving the package to `ios/simple_count_down_timer/` with sources under `Sources/`, so Flutter detects it.
+- Migrated Android to built-in Kotlin: apply the Kotlin Gradle Plugin only on AGP < 9 and replaced `kotlinOptions{}` with a root-level `kotlin.compilerOptions{}` block.
+- Migrated the example app to Swift Package Manager, removing CocoaPods integration for faster builds.
