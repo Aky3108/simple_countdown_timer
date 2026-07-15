@@ -3,7 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:simple_count_down_timer/animated_components/basic_timer.dart';
 
+import 'animated_components/blur_timer.dart';
 import 'animated_components/fade_in_timer.dart';
+import 'animated_components/flip_timer.dart';
+import 'animated_components/rotation_timer.dart';
+import 'animated_components/scale_timer.dart';
+import 'animated_components/slide_up_timer.dart';
 
 //ignore: must_be_immutable
 class SimpleCountDownTimer extends StatefulWidget {
@@ -35,6 +40,7 @@ class _SimpleCountDownTimerState extends State<SimpleCountDownTimer> {
   void initState() {
     super.initState();
 
+    updateTimerStrings();
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if ((widget.duration - const Duration(seconds: 1)).isNegative == false) {
         widget.duration = widget.duration - const Duration(seconds: 1);
@@ -65,23 +71,76 @@ class _SimpleCountDownTimerState extends State<SimpleCountDownTimer> {
     });
   }
 
+  Widget _buildTimer() {
+    switch (widget.animationStyle) {
+      case AnimationStyle.basic:
+        return BasicTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.slideUp:
+        return SlideUpTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.scale:
+        return ScaleTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.flip:
+        return FlipTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.rotation:
+        return RotationTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.blur:
+        return BlurTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+      case AnimationStyle.fadeIn:
+      default:
+        return FadeInTimer(
+            daysString: daysString,
+            hoursString: hoursString,
+            minutesString: minutesString,
+            secondsString: secondsString,
+            textStyle: widget.textStyle);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(10),
         color: Colors.orangeAccent,
-        child: widget.animationStyle == AnimationStyle.fadeIn
-            ? FadeInTimer(
-                daysString: daysString,
-                hoursString: hoursString,
-                minutesString: minutesString,
-                secondsString: secondsString)
-            : BasicTimer(
-                daysString: daysString,
-                hoursString: hoursString,
-                minutesString: minutesString,
-                secondsString: secondsString));
+        child: _buildTimer());
   }
 }
 
-enum AnimationStyle { fadeIn, basic }
+enum AnimationStyle {
+  fadeIn,
+  basic,
+  slideUp,
+  scale,
+  flip,
+  rotation,
+  blur
+}

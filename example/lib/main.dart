@@ -13,10 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
+  timer.AnimationStyle _selectedStyle = timer.AnimationStyle.fadeIn;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +23,38 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: timer.SimpleCountDownTimer(
-            duration: const Duration(days: 1, seconds: 5),
-            animationStyle: timer.AnimationStyle.fadeIn,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Pick an animation style',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 12),
+              DropdownButton<timer.AnimationStyle>(
+                value: _selectedStyle,
+                items: timer.AnimationStyle.values
+                    .map(
+                      (style) => DropdownMenuItem(
+                        value: style,
+                        child: Text(style.name),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (style) {
+                  if (style != null) {
+                    setState(() => _selectedStyle = style);
+                  }
+                },
+              ),
+              const SizedBox(height: 32),
+              timer.SimpleCountDownTimer(
+                // key forces a rebuild so the new animation restarts
+                key: ValueKey(_selectedStyle),
+                duration: const Duration(days: 1, seconds: 5),
+                animationStyle: _selectedStyle,
+              ),
+            ],
           ),
         ),
       ),
